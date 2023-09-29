@@ -20,11 +20,16 @@
     return self;
 }
 
-- (void) dealloc
+- (void)unregisterAll
 {
     for (NSString *bindingName in [_actions allKeys]) {
         [self unbind:bindingName];
     }
+}
+
+- (void) dealloc
+{
+    [self unregisterAll];
 }
 
 + (instancetype) sharedBinder

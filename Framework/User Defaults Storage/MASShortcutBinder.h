@@ -64,4 +64,9 @@
 */
 - (void) registerDefaultShortcuts: (NSDictionary*) defaultShortcuts;
 
+/**
+ Unregister all shortcuts from user defaults.
+*/
+- (void)unregisterAll;
+
 @end
